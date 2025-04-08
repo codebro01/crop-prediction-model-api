@@ -1,5 +1,6 @@
 # server.py
 from flask import Flask, request, jsonify
+from waitress import serve
 import joblib
 
 app = Flask(__name__)
@@ -15,4 +16,5 @@ def predict():
     return jsonify({'prediction': prediction.tolist()})
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    serve(app, host="0.0.0.0", port=5000)
+    # app.run(port=5000)

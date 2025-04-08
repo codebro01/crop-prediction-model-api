@@ -12,7 +12,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5100', // Change to your production URL later
+        url: 'https://crop-prediction-model-uxtd.onrender.com/predict', // Change to your production URL later
       },
     ],
   },
